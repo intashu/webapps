@@ -1,5 +1,5 @@
 streamlit>=1.24.0
-pip install streamlit-folium
+streamlit_folium
 folium>=0.15.0
 requests>=2.28.0
 geoglows>=0.3.5
