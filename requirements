@@ -1,12 +1,8 @@
-
-Streamlit version: 1.26.0
-Streamlit-folium version: 0.13.0
-Folium version: 0.14.0
-
-requests>=2.28.0
-geoglows>=0.3.5
-google-api-python-client>=2.80.0
-earthengine-api>=0.1.344
-pandas>=1.5.0
-plotly>=5.15.0
-numpy>=1.24.0
+streamlit
+folium
+streamlit-folium
+earthengine-api
+geoglows
+pandas
+plotly
+requests
