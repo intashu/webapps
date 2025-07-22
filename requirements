@@ -1,6 +1,8 @@
-streamlit>=1.24.0
-streamlit_folium
-folium>=0.15.0
+
+Streamlit version: 1.26.0
+Streamlit-folium version: 0.13.0
+Folium version: 0.14.0
+
 requests>=2.28.0
 geoglows>=0.3.5
 google-api-python-client>=2.80.0
