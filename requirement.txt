@@ -1,0 +1,9 @@
+streamlit
+streamlit-folium
+folium
+requests
+geoglows
+google-api-python-client
+earthengine-api
+pandas
+plotly
