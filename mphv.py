@@ -8,6 +8,13 @@ import plotly.graph_objects as go
 import plotly.express as px
 from streamlit_folium import st_folium, folium_static
 
+
+# Secure GEE initialization using secrets
+service_account = st.secrets["GEE_SERVICE_ACCOUNT"]
+private_key = st.secrets["GEE_PRIVATE_KEY"]
+
+credentials = ee.ServiceAccountCredentials(service_account, key_data=private_key)
+ee.Initialize(credentials)
 # --- Streamlit Setup ---
 st.set_page_config(page_title="🌊 GEOGloWS River Dashboard", layout="wide")
 st.markdown("""
@@ -23,11 +30,6 @@ st.markdown('<div class="description">Click on the map to pick a location and ha
 st.sidebar.header("⚙️ Settings")
 selected_state = st.sidebar.text_input("State Name", "Madhya Pradesh")
 
-# --- EE Init & AOI ---
-try:
-    ee.Initialize()
-except:
-    ee.Authenticate(); ee.Initialize()
 
 state_fc = ee.FeatureCollection("projects/ee-shpp/assets/State_Boundary")
 state_sel = state_fc.filter(ee.Filter.eq('STATE', selected_state))
