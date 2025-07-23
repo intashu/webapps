@@ -18,14 +18,14 @@ credentials = ee.ServiceAccountCredentials(service_account, key_data=private_key
 ee.Initialize(credentials)
 
 # --- Streamlit Setup ---
-st.set_page_config(page_title="🌊 GEOGloWS River Dashboard", layout="wide")
+st.set_page_config(page_title="🌊  River Discharge by Logical Limit Consulting LLP Dashboard", layout="wide")
 st.markdown("""
 <style>
 .big-title { font-size:2.5em; font-weight:bold; color:#0072B5; }
 .description { font-size:1.1em; color:#444; margin-bottom:1em; }
 </style>
 """, unsafe_allow_html=True)
-st.markdown('<div class="big-title">🌊 GEOGloWS River Dashboard</div>', unsafe_allow_html=True)
+st.markdown('<div class="big-title">🌊  River Discharge by Logical Limit Consulting LLP Dashboard</div>', unsafe_allow_html=True)
 st.markdown('<div class="description">Click on the map to pick a location and have the River ID fetched automatically.</div>', unsafe_allow_html=True)
 
 # --- Sidebar: state selection ---
