@@ -9,12 +9,14 @@ import plotly.express as px
 from streamlit_folium import st_folium, folium_static
 
 
+
 # Secure GEE initialization using secrets
 service_account = st.secrets["GEE_SERVICE_ACCOUNT"]
 private_key = st.secrets["GEE_PRIVATE_KEY"]
 
 credentials = ee.ServiceAccountCredentials(service_account, key_data=private_key)
 ee.Initialize(credentials)
+
 # --- Streamlit Setup ---
 st.set_page_config(page_title="🌊 GEOGloWS River Dashboard", layout="wide")
 st.markdown("""
